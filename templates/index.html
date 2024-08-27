@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flood Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+        }
+        input[type="file"] {
+            padding: 10px;
+        }
+        input[type="submit"] {
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+    </style>
+</head>
+<body>
+    <h1>Flood Prediction App</h1>
+    <form action="/" method="post">
+        <label for="monsoonIntensity">Monsoon Intensity:</label>
+        <input type="text" id="monsoonIntensity" name="MonsoonIntensity" placeholder="Enter Monsoon Intensity" required><br>
+
+        <label for="topographyDrainage">Topography Drainage:</label>
+        <input type="number" id="topographyDrainage" name="TopographyDrainage" placeholder="Enter Topography Drainage" required><br>
+
+        <label for="riverManagement">River Management:</label>
+        <input type="number" id="riverManagement" name="RiverManagement" placeholder="Enter River Management" required><br>
+
+        <label for="deforestation">Deforestation:</label>
+        <input type="number" id="deforestation" name="Deforestation" placeholder="Enter Deforestation" required><br>
+
+        <label for="urbanization">Urbanization:</label>
+        <input type="number" id="urbanization" name="Urbanization" placeholder="Enter Urbanization" required><br>
+
+        <label for="climateChange">Climate Change:</label>
+        <input type="number" id="climateChange" name="ClimateChange" placeholder="Enter Climate Change" required><br>
+
+        <label for="damsQuality">Dams Quality:</label>
+        <input type="number" id="damsQuality" name="DamsQuality" placeholder="Enter Dams Quality" required><br>
+
+        <label for="siltation">Siltation:</label>
+        <input type="number" id="siltation" name="Siltation" placeholder="Enter Siltation" required><br>
+
+        <label for="agriculturalPractices">Agricultural Practices:</label>
+        <input type="number" id="agriculturalPractices" name="AgriculturalPractices" placeholder="Enter Agricultural Practices" required><br>
+
+        <label for="encroachm">Encroachm:</label>
+        <input type="number" id="encroachm" name="Encroachm" placeholder="Enter Encroachm Practices" required><br>
+
+        <label for="ineffectiveDisasterPreparedness">Ineffective Disaster Preparedness:</label>
+        <input type="number" id="ineffectiveDisasterPreparedness" name="IneffectiveDisasterPreparedness" placeholder="Enter Ineffective Disaster Preparedness" required><br>
+
+        <label for="drainageSystems">Drainage Systems:</label>
+        <input type="number" id="drainageSystems" name="DrainageSystems" placeholder="Enter Drainage Systems" required><br>
+
+        <label for="coastalVulnerability">Coastal Vulnerability:</label>
+        <input type="number" id="coastalVulnerability" name="CoastalVulnerability" placeholder="Enter Coastal Vulnerability" required><br>
+
+        <label for="landslides">Landslides:</label>
+        <input type="number" id="landslides" name="Landslides" placeholder="Enter Landslides" required><br>
+
+        <label for="watersheds">Watersheds:</label>
+        <input type="number" id="watersheds" name="Watersheds" placeholder="Enter Watersheds" required><br>
+
+        <label for="deterioratingInfrastructure">Deteriorating Infrastructure:</label>
+        <input type="number" id="deterioratingInfrastructure" name="DeterioratingInfrastructure" placeholder="Enter Deteriorating Infrastructure" required><br>
+
+        <label for="populationScore">Population Score:</label>
+        <input type="number" id="populationScore" name="PopulationScore" placeholder="Enter Population Score" required><br>
+
+        <label for="WetlandLoss">Wetland Loss:</label>
+        <input type="number" id="WetlandLoss" name="WetlandLoss" placeholder="Enter Wetland Loss" required><br>
+
+        <label for="inadequatePlanning">Inadequate Planning:</label>
+        <input type="number" id="inadequatePlanning" name="InadequatePlanning" placeholder="Enter Inadequate Planning" required><br>
+
+        <label for="politicalFactors">Political Factors:</label>
+        <input type="number" id="politicalFactors" name="PoliticalFactors" placeholder="Enter Political Factors" required><br>
+
+        <label for="floodProbability">Flood Probability:</label>
+        <input type="number" id="floodProbability" name="FloodProbability" placeholder="Enter Flood Probability" required><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    {% if prediction_text %}
+        <h2>Predictions:</h2> 
+            {{ prediction_text }}
+        
+    {% endif %}
+</body>
+</html>
